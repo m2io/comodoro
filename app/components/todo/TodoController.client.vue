@@ -253,7 +253,7 @@ function onRightClick(e: MouseEvent, index: number) {
 						/>
 						<span
 							class="text-zinc-200 text-lg relative"
-							:class="{ 'text-zinc-400 before:absolute before:top-1/2 before:-right-1 before:-left-1 before:h-0.5 before:-translate-y-1/2 before:rounded-full before:bg-primary ': todo.done }"
+							:class="{ 'text-zinc-500 ': todo.done }"
 						>
 							{{ todo.text }}
 						</span>
