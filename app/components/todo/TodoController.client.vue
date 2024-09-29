@@ -242,7 +242,7 @@ function onRightClick(e: MouseEvent, index: number) {
 				@click="checkTodo(index)"
 				@keyup.enter.prevent="checkTodo(index)"
 			>
-				<div class="flex items-center">
+				<div class="flex items-center flex-1">
 					<div
 						v-if="currentlyEditableTodoIndex !== index"
 						class="flex items-center gap-x-6"
@@ -262,12 +262,13 @@ function onRightClick(e: MouseEvent, index: number) {
 					<form
 						v-else
 						ref="editFormEl"
+						class="w-full"
 						@submit.prevent="updateTodoWithText(index, editTodoText)"
 					>
 						<input
 							v-model="editTodoText"
 							type="text"
-							class="focus-visible:outline-none border-none"
+							class="focus-visible:outline-none border-none w-full"
 						/>
 					</form>
 				</div>
