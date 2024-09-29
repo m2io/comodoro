@@ -4,7 +4,7 @@ const isChecked = defineModel<boolean>({ required: true, default: false })
 
 <template>
 	<label
-		class="size-5 border rounded-[7px] group inline-flex items-center justify-center cursor-pointer transition-all duration-200 ease-in-out"
+		class="min-w-5 min-h-5 border rounded-[7px] group inline-flex items-center justify-center cursor-pointer transition-all duration-200 ease-in-out"
 		:class="{
 			'bg-primary border-primary': isChecked,
 			'border-zinc-500': !isChecked,
@@ -16,13 +16,13 @@ const isChecked = defineModel<boolean>({ required: true, default: false })
 			:checked="isChecked"
 		>
 		<BaseIcon
-			class=""
+			class="absolute"
 			:class="{
 				'group-hover:block hidden text-zinc-500': !isChecked,
 				'block': isChecked,
 			}"
 			name="material-symbols-check-rounded"
-			size="24"
+			size="16"
 		/>
 	</label>
 </template>
